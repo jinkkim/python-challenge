@@ -11,7 +11,7 @@ with open('election_data.csv', 'r') as csvfile:
     voteData = csv.reader(csvfile, delimiter=',')
     header = next(voteData)
 
-    # Loop through the data, Separate columns into month and profit
+    # Loop through the data, to calculate votes
     for row in voteData:
 
         if row[2] == candidate[0]:
@@ -27,7 +27,7 @@ with open('election_data.csv', 'r') as csvfile:
 
 totalVote = sum(vote)
 
-# find max values and determine the winner
+# find max value and determine the winner
 winner = candidate[vote.index(max(vote))]
  
 # print output in terminal
